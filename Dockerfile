@@ -14,7 +14,7 @@ RUN wget ${source_url}/openssl-${openssl_ver}.tar.gz && \
     tar zxf openssl-${openssl_ver}.tar.gz && \
     cd openssl-${openssl_ver} && \
     ./config no-asm && \
-    make -j 2 && \
+    make && \
     make install && \
     cd .. && \
     rm -rf openssl-${openssl_ver}
