@@ -6,7 +6,7 @@ ADD deb-ubuntu12.04/ /var/tmp/deb/
 RUN dpkg -i /var/tmp/deb/*.deb
 
 ENV source_url=https://www.openssl.org/source \
-    openssl_ver=0.9.8zh
+    openssl_ver=1.0.0a
 
 RUN wget ${source_url}/openssl-${openssl_ver}.tar.gz && \
     echo "$(wget -O - ${source_url}/openssl-${openssl_ver}.tar.gz.sha1)  openssl-${openssl_ver}.tar.gz" | \
