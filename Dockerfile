@@ -1,12 +1,12 @@
-FROM ubuntu:12.04
+FROM ubuntu:18.04
 
 WORKDIR /var/tmp/openssl
 
-ADD deb-ubuntu12.04/ /var/tmp/deb/
+ADD deb-ubuntu18.04/ /var/tmp/deb/
 RUN dpkg -i /var/tmp/deb/*.deb
 
 ENV source_url=https://www.openssl.org/source \
-    openssl_ver=1.0.1h
+    openssl_ver=1.0.1i
 
 RUN wget ${source_url}/openssl-${openssl_ver}.tar.gz && \
     echo "$(wget -O - ${source_url}/openssl-${openssl_ver}.tar.gz.sha1)  openssl-${openssl_ver}.tar.gz" | \
