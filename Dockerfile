@@ -6,7 +6,7 @@ ADD deb-ubuntu18.04/ /var/tmp/deb/
 RUN dpkg -i /var/tmp/deb/*.deb
 
 ENV source_url=https://www.openssl.org/source \
-    openssl_ver=1.1.0a
+    openssl_ver=1.1.0b
 
 RUN wget ${source_url}/openssl-${openssl_ver}.tar.gz && \
     echo "$(wget -O - ${source_url}/openssl-${openssl_ver}.tar.gz.sha1)  openssl-${openssl_ver}.tar.gz" | \
